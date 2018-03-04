@@ -9,13 +9,13 @@ zuul:
   ignoredServices: '*'
   prefix: /api
   routes:
-    artistas:
+    microsinger:
       path: /singer/**
-      serviceId: artistas
+      serviceId: microsinger
       strip-prefix: false
     albums: 
       path: /album/**
-      serviceId: artistas
+      serviceId: microsinger
       strip-prefix: false
     instrumentos:
       path: /instrument/**
