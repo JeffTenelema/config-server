@@ -19,7 +19,7 @@ zuul:
       strip-prefix: false
     instrumentos:
       path: /instrument/**
-      serviceId: instrumentos
+      serviceId: microinstrument
       strip-prefix: false
       
 eureka:
