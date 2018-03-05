@@ -4,24 +4,7 @@ spring:
 
 server:
   port: 8000
-
-zuul:
-  ignoredServices: '*'
-  prefix: /api
-  routes:
-    microsinger:
-      path: /singer/**
-      serviceId: microsinger
-      strip-prefix: false
-    albums: 
-      path: /album/**
-      serviceId: microsinger
-      strip-prefix: false
-    instrumentos:
-      path: /instrument/**
-      serviceId: microinstrument
-      strip-prefix: false
-      
+  
 eureka:
   client:
     service-url:
@@ -30,3 +13,20 @@ eureka:
 endpoints:
   trace:
     sensitive: false
+    
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    microsinger:
+      serviceId: microsinger
+      path: /singer/**
+      strip-prefix: false
+    albums: 
+      serviceId: microsinger
+      path: /album/**
+      strip-prefix: false
+    microinstrument:
+      serviceId: microinstrument
+      path: /instrument/**
+      strip-prefix: false
