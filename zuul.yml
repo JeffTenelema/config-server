@@ -18,6 +18,10 @@ zuul:
   ignoredServices: '*'
   prefix: /api
   routes:
+    microinstrument:
+      serviceId: microinstrument
+      path: /instrument/**
+      strip-prefix: false
     microsinger:
       serviceId: microsinger
       path: /singer/**
@@ -26,7 +30,4 @@ zuul:
       serviceId: microsinger
       path: /album/**
       strip-prefix: false
-    microinstrument:
-      serviceId: microinstrument
-      path: /instrument/**
-      strip-prefix: false
+    
